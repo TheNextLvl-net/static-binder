@@ -21,11 +21,11 @@ It uses weak references to prevent memory leaks and includes security controls t
 
 ```kts
 repositories {
-    maven("https://repo.thenextlvl.net/snapshots")
+    maven("https://repo.thenextlvl.net/releases")
 }
 
 dependencies {
-    implementation("net.thenextlvl:static-binder:0.1.1")
+    implementation("net.thenextlvl:static-binder:0.1.2")
 }
 ```
 
