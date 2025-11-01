@@ -21,7 +21,8 @@ final class SimpleStaticBinder implements StaticBinder {
 
     @Override
     public <T> void bind(Class<T> clazz, T instance) throws IllegalArgumentException, SecurityException {
-        if (bindings.containsKey(clazz)) {
+        var reference = bindings.get(clazz);
+        if (reference != null && reference.get() != null) {
             throw new IllegalArgumentException("Instance already bound for class " + clazz.getName());
         }
         if (!clazz.isInstance(instance)) {
