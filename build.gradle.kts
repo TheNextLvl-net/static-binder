@@ -4,10 +4,12 @@ plugins {
 }
 
 group = "net.thenextlvl"
-version = "0.1.1"
+version = "0.1.2"
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withJavadocJar()
+    withSourcesJar()
 }
 
 tasks.compileJava {
