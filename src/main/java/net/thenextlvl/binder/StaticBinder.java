@@ -38,6 +38,7 @@ public sealed interface StaticBinder permits SimpleStaticBinder {
      * @param clazz    the class to bind
      * @param instance the instance to bind
      * @param <T>      the type of the class
+     * @throws IllegalArgumentException if the class already has a binding
      * @throws IllegalArgumentException if the instance is not assignable to the class
      * @throws SecurityException        if the binder access is not allowed
      */
