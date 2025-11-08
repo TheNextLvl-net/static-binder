@@ -52,6 +52,7 @@ public sealed interface StaticBinder permits SimpleStaticBinder {
      * @param <T>   the type of the class
      * @return an optional containing the instance if found, empty otherwise
      * @throws SecurityException if the binder access is not allowed
+     * @see #find(Class)
      */
     @CheckReturnValue
     @Contract(mutates = "this")
@@ -65,6 +66,7 @@ public sealed interface StaticBinder permits SimpleStaticBinder {
      * @return the instance if found, throws an exception otherwise
      * @throws IllegalStateException if no instance is found
      * @throws SecurityException     if the binder access is not allowed
+     * @see #get(Class)
      */
     <T> T find(Class<T> clazz) throws IllegalStateException, SecurityException;
 }
