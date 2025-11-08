@@ -68,5 +68,7 @@ public sealed interface StaticBinder permits SimpleStaticBinder {
      * @throws SecurityException     if the binder access is not allowed
      * @see #get(Class)
      */
+    @CheckReturnValue
+    @Contract(mutates = "this")
     <T> T find(Class<T> clazz) throws IllegalStateException, SecurityException;
 }
