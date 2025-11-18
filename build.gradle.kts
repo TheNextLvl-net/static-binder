@@ -24,7 +24,7 @@ dependencies {
     compileOnly("org.jetbrains:annotations:26.0.2-1")
     compileOnly("org.jspecify:jspecify:1.0.0")
 
-    testImplementation(platform("org.junit:junit-bom:6.0.1"))
+    testImplementation(platform("org.junit:junit-bom:6.1.0-M1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
